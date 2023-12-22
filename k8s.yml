@@ -1,0 +1,17 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: ddns-updater
+spec:
+  schedule: "*/30 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: updater
+              image: my-ddns-updater-image
+              envFrom:
+                - secretRef:
+                    name: ddns-secrets
+          restartPolicy: OnFailure
