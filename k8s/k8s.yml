@@ -2,6 +2,7 @@ apiVersion: batch/v1beta1  # または batch/v1
 kind: CronJob
 metadata:
   name: ddns-updater
+  namespace: ddns-updater
 spec:
   schedule: "*/30 * * * *"
   jobTemplate:
