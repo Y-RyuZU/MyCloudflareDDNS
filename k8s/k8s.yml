@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: batch/v1beta1  # または batch/v1
 kind: CronJob
 metadata:
   name: ddns-updater
