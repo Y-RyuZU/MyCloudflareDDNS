@@ -1,8 +1,8 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: ddns-updater
-  namespace: ddns-updater
+  name: my-cloudflare-ddns
+  namespace: my-cloudflare-ddns
 spec:
   schedule: "*/30 * * * *"
   jobTemplate:
