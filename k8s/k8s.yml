@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
             - name: updater
-              image: my-ddns-updater-image
+              image: ghcr.io/y-ryuzu/mycloudflareddns:1.0.6
               envFrom:
                 - secretRef:
                     name: ddns-secrets
